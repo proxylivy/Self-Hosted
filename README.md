@@ -20,7 +20,7 @@ I made a talk in spanish to Github Latam about start in Self-Hosting Services, y
 ```mermaid
 graph TB
     subgraph Internet["Internet Environment"]
-        CLIENT[Cliente]
+        CLIENT[Client]
         CF[Cloudflare]
         CLIENT --> CF
     end
@@ -32,26 +32,26 @@ graph TB
             subgraph Containers
                 direction TB
                 
-                subgraph "Monitoreo"
+                subgraph "Monitoring"
                     DOZ[Dozzle]
                     FAL[Falco]
                     UPT[Uptime-Kuma]
                     CUP[Cup]
                 end
                 
-                subgraph "Servicios Multimedia"
+                subgraph "Multimedia"
                     JF[Jellyfin]
                     NAV[Navidrome]
                 end
                 
-                subgraph "Servicios Web"
+                subgraph "Web Based"
                     GH[Ghost]
                     FR[FreshRSS]
                     DM[Docmost]
                     IT[IT-Tools]
                 end
                 
-                subgraph "Utilidades"
+                subgraph "Utilities"
                     GUA[Guacamole]
                     STI[Syncthing]
                     VW[Vaultwarden]
@@ -77,19 +77,19 @@ graph TB
 ## 🔒 Security
 **Network Security**
 - [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) for secure remote access
-- CG-NAT protected network
+- Support CG-NAT based network like ISP connections without static or dynamic public ip
 
 **Domain Management**
 - [Cloudflare managed domains](https://domains.cloudflare.com/)
-- SSL/TLS encryption
+- SSL/TLS encryption (Not by default, please configure Cloudflare Dashboard)
 - DNS configuration through Cloudflare Dashboard
 
 ## 🛠 Deployed Services
 **Monitoring**
-- [Dozzle](https://github.com/amir20/dozzle) - Container log viewer
-- [Falco](https://github.com/falcosecurity/falco) - Security monitoring
-- [Uptime-Kuma](https://github.com/louislam/uptime-kuma) - Service uptime monitoring
-- [Cup](https://github.com/sergi0g/cup) - Container updates monitor
+- [Dozzle](https://github.com/amir20/dozzle) - Log viewer
+- [Falco](https://github.com/falcosecurity/falco) - Cloud Native Runtime Security
+- [Uptime-Kuma](https://github.com/louislam/uptime-kuma) - Monitoring Tools (UP/DOWN)
+- [Cup](https://github.com/sergi0g/cup) - Updates monitor for containers
 
 **Multimedia Services**
 - [Jellyfin](https://github.com/jellyfin/jellyfin) - Media server
