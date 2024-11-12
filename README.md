@@ -1,4 +1,7 @@
 # Self-hosted personal services - HP Microserver N40L
+This repository contains config files to guide an instalation using Containers (Docker, Podman), i hope this help you with anything in your server ^^
+
+I made a talk in spanish to Github Latam about start in Self-Hosting Services, you can see in [Youtube](https://www.youtube.com/live/bVE38L8jteM?si=PhLPpdBiGVGlY2Xw)
 
 ## 📌 Overview
 - Model: HP Microserver N40L
@@ -73,50 +76,54 @@ graph TB
 
 ## 🔒 Security
 **Network Security**
-- Cloudflare Tunnel for secure remote access
+- [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) for secure remote access
 - CG-NAT protected network
-- End-to-end encryption via Cloudflare
 
 **Domain Management**
-- Cloudflare managed domains
+- [Cloudflare managed domains](https://domains.cloudflare.com/)
 - SSL/TLS encryption
 - DNS configuration through Cloudflare Dashboard
 
 ## 🛠 Deployed Services
 **Monitoring**
-- Dozzle - Container log viewer
-- Falco - Security monitoring
-- Uptime-Kuma - Service uptime monitoring
-- Cup - Container updates monitor
+- [Dozzle](https://github.com/amir20/dozzle) - Container log viewer
+- [Falco](https://github.com/falcosecurity/falco) - Security monitoring
+- [Uptime-Kuma](https://github.com/louislam/uptime-kuma) - Service uptime monitoring
+- [Cup](https://github.com/sergi0g/cup) - Container updates monitor
 
 **Multimedia Services**
-- Jellyfin - Media server
-- Navidrome - Music streaming
+- [Jellyfin](https://github.com/jellyfin/jellyfin) - Media server
+- [Navidrome](https://github.com/navidrome/navidrome/) - Music streaming
 
 **Web Services**
-- Ghost - Publishing platform -> [Read my post](https://ghost.deathgabox.work/)
-- FreshRSS - RSS feed aggregator
-- Docmost - Documentation platform
-- IT-Tools - Developer utilities
+- [Ghost](https://github.com/TryGhost/Ghost) - Publishing platform -> [Read my blog post](https://ghost.deathgabox.work/)
+- [Quartz](https://github.com/jackyzha0/quartz) via [shoomey/dockerized-quartz](https://github.com/shommey/dockerized-quartz) - Alternative to Obsidian Publish -> [Read My Notes](https://obsidian.deathgabox.work/)
+- [FreshRSS](https://github.com/FreshRSS/FreshRSS) - RSS feed aggregator
+- [Docmost](https://github.com/Docmost/docmost) - Documentation platform
+- [IT-Tools](https://github.com/CorentinTh/it-tools) - Collection of handy online tools for developers, with great UX.
 
 **Utilities**
-- Guacamole - Remote access gateway
-- Syncthing - File synchronization
-- Vaultwarden - Password management
-- Stirling PDF - PDF manipulation
-- Slink - Photo storage
-- Send2reader - Kobo book sender
-- Homebox - Home inventory manager
-- Ferdium - Service aggregator
+- [Guacamole](https://github.com/apache/guacamole-server) via [abesnier/docker-guacamole](https://github.com/abesnier/docker-guacamole) - Remote access gateway
+- [Syncthing](https://github.com/syncthing/syncthing) - File synchronization
+- [Vaultwarden](https://github.com/dani-garcia/vaultwarden) - Password management
+- [Stirling PDF](https://github.com/Stirling-Tools/Stirling-PDF) - PDF manipulation
+- [Slink](https://github.com/andrii-kryvoviaz/slink) - Photo storage
+- [Send2reader](https://github.com/daniel-j/send2ereader) - Kobo book sender
+- [Homebox](https://github.com/sysadminsmedia/homebox) - Home inventory manager
+- [Ferdium-server](https://github.com/ferdium/ferdium-server) - Service aggregator
 
 ## 📦 Container Management
 **Containerization**
-- Docker for container runtime
-- Docker Compose for service orchestration
-- Local volume management for persistence
+- [Podman](https://podman.io/) for container use
+- [Podman-Compose](https://github.com/containers/podman-compose) for simple service orchestration with `compose.yaml` files and transparent with adding registry for all images (quay.io, ghcr.io, docker.io/, custom registry, etc)
+- Compatible with Docker and Kubernetes (Read this [Blog about](https://www.redhat.com/en/blog/podman-play-kube-updates))
+- Reading about [compose specs](https://compose-spec.io/) and [OCI](https://opencontainers.org/), to be agnostic about container provider.
 
-## Extra
-- Base install on my [Dotfiles Repo](https://github.com/DeathGabox/Dotfiles)
+
+
+# Extra Info
+## Thanks
+- General Dotfiles and Linux Guides are in my [Dotfiles Repo](https://github.com/DeathGabox/Dotfiles)
 - Inspired on [Atareo Self Hosted Repo](https://github.com/atareao/self-hosted)
 
 ## Hardware Limitation
